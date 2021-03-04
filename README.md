@@ -10,7 +10,7 @@ Tai yra v0.1 papildymas. Nuo šios versijos programa (vartotojui pasirinkus) gal
 
 # V0.3 skirta 2021.03.06
 
-Tai yra v0.1 ir v0.2 papildymas. Nuo šios versijos programa yra išskirstyta į antrasštinius failus. Taip pat nuo šios versijos naudoju išimčių valdymą (angl. exeption handling).
+[v0.3](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.3) yra v0.1 ir v0.2 papildymas. Nuo šios versijos programa yra išskirstyta į antrasštinius failus. Taip pat nuo šios versijos naudoju išimčių valdymą (angl. exeption handling).
 *Programa yra 3 failuose `v03.cpp`, `func.cpp` ir `func.h`*
 
 # Paleidimo instrukcija
