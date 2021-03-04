@@ -8,6 +8,11 @@ Programa klausia studentų vardų ir pavardžių, pažymių už namų darbus ir 
 
 Tai yra v0.1 papildymas. Nuo šios versijos programa (vartotojui pasirinkus) gali skaityti duomenis iš *(pavadinimas)*.txt failo (jo pavadinimą reikia įrašyti 25 kodo eilutėje). Programa taip pat išrikiuoja studentus pagal jų pavardes. (Programa yra pavadinta ``vec.cpp``)
 
+# V0.3 skirta 2021.03.06
+
+Tai yra v0.1 ir v0.2 papildymas. Nuo šios versijos programa yra išskirstyta į antrasštinius failus. Taip pat nuo šios versijos naudoju išimčių valdymą (angl. exeption handling).
+*Programa yra 3 failuose `v03.cpp`, `func.cpp` ir `func.h`*
+
 # Paleidimo instrukcija
 Programą geriausia pasileisti terminale (aš naudoju visual studio code) su šiomis komandomis:
 
