@@ -2,7 +2,7 @@
 
 # V0.1 skirta 2021.02.20
 
-[v0.1](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.1)Programa klausia studentų vardų ir pavardžių, pažymių už namų darbus ir už egzaminą bei išveda studento vardą, pavardę ir galutinį pažymį (vidurkį arba medianą) į ekraną. Programa leodžia vartotojui įvesti pažymius pačiam arba juos sugeneruoja, ji taip pat veikia kai pažymių už namų darbus skaičius nėra žinomas. (main.cpp yra versija su masyvais, o vector.cpp yra versija su vektoriais.)
+[v0.1](https://github.com/Sasnauskaite/2uzduotis/releases/tag/V0.1)Programa klausia studentų vardų ir pavardžių, pažymių už namų darbus ir už egzaminą bei išveda studento vardą, pavardę ir galutinį pažymį (vidurkį arba medianą) į ekraną. Programa leodžia vartotojui įvesti pažymius pačiam arba juos sugeneruoja, ji taip pat veikia kai pažymių už namų darbus skaičius nėra žinomas. (main.cpp yra versija su masyvais, o vector.cpp yra versija su vektoriais.)
 
 # V0.2 skirta 2021.03.06
 
