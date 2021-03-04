@@ -10,16 +10,24 @@
 
 # V0.3 skirta 2021.03.06
 
-[v0.3](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.3) yra v0.1 ir v0.2 papildymas. Nuo šios versijos programa yra išskirstyta į antrasštinius failus. Taip pat nuo šios versijos naudoju išimčių valdymą (angl. exeption handling).
+[v0.3](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.3) yra v0.1 ir v0.2 papildymas. Nuo šios versijos programa yra išskirstyta į antrasštinius failus. 
+Taip pat nuo šios versijos naudoju išimčių valdymą (angl. exeption handling).
+
+Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 eilutėje.
+
 *Programa yra 3 failuose `v03.cpp`, `func.cpp` ir `func.h`*
 
 # Paleidimo instrukcija
 Programą geriausia pasileisti terminale (aš naudoju visual studio code) su šiomis komandomis:
 
-pirma sukompiliuoti naudojant komandą: 
+Pirma sukompiliuoti naudojant komandą: 
 
-`g++ main.cpp -o test` (masyvų versijai) arba `g++ vector.cpp -o test` (vektorių versijai)
+V0.1-> `g++ main.cpp -o test` (masyvų versijai) arba `g++ vector.cpp -o test` (vektorių versijai)
 
-po to paleisti su komanda: `./test`
+V0.2-> `g++ vec.cpp -o test`
+
+V0.3-> `g++ v03.cpp -o test` (norint, kad veiktų ši versija jums reikia turėti ir kitus šiai programai reikalingus failus (t.y. func.cpp ir func.h)).
+
+Po to tereikia paleisti su komanda: `./test`
 
 Tada programa pradeda veikti ir jums belieka atsakyti į jos užduodamus klausimus (atsakyti reikia t="taip" arba n="ne).
