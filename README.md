@@ -17,6 +17,12 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 
 *Programa yra 3 failuose `v03.cpp`, `func.cpp` ir `func.h`*
 
+# V0.4 skirta 2021.03.20
+
+[v0.2](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.4) yra v0.3 papildymas. Nuo šios versijos programa pati gali sukurti šabloninį studentų failą, tuomet jį perskaito, apskaičiavusi galutinį balą išskirsto studentus į ,,mokslinčius" ir ,,nuskriaustuosius" ir išveda informaciją į failus su atitinkamais pavadinimais, taip pat programa apskaičiuoja, kiek ms ji užtrunka atlikdama užduotis (kurdama failą, jį skaitydama, išskirstydama studentus pagal galutinį balą bei išvesdama į atitinkamus failus).
+
+*Programa yra 3 failuose `v04.cpp`, `funcc.cpp` ir `func2.h`*
+
 # Paleidimo instrukcija
 Programą geriausia pasileisti terminale (aš naudoju visual studio code) su šiomis komandomis:
 
@@ -27,6 +33,8 @@ V0.1-> `g++ main.cpp -o test` (masyvų versijai) arba `g++ vector.cpp -o test` (
 V0.2-> `g++ vec.cpp -o test`
 
 V0.3-> `g++ v03.cpp -o test` (norint, kad veiktų ši versija jums reikia turėti ir kitus šiai programai reikalingus failus (t.y. func.cpp ir func.h)).
+
+V0.4-> `g++ v04.cpp -o test` (norint, kad veiktų ši versija jums reikia turėti ir kitus šiai programai reikalingus failus (t.y. funcc.cpp ir func2.h)).
 
 Po to tereikia paleisti su komanda: `./test`
 
