@@ -1,4 +1,4 @@
-#include "manofunc.cpp"
+#include "funcc.cpp"
 
 int main()
 {
