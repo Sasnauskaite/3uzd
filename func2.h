@@ -1,14 +1,14 @@
 #pragma once
 
 #include <iostream>
-#include <sstream>
+#include <fstream>
 #include <iomanip>
-#include <string>
-#include <ctime>
-#include <random>
 #include <algorithm>
 #include <vector>
-#include <fstream>
+#include <string>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h> 
 #include <chrono>
 
 using std::cout;
@@ -16,44 +16,50 @@ using std::cin;
 using std::endl;
 using std::string;
 using std::vector;
-using namespace std::chrono;
 
-struct Students 
+struct Studentas
 {
-    string name, lastname; // vardas, pavarde
-    vector<int> nd; // Namu darbai
-    int exam = 0;
-    double avg, med;
+	string name;
+	string lastname;
+	double avg;
+	double med;
+    int skolaAvg;
+    int skolaMed;
 };
-struct Happy
-{
-    string name, lastname; // vardas, pavarde
-    double avg, med;
-};
-struct Sad
-{
-    string name, lastname; // vardas, pavarde
-    double avg, med;
-};
+vector<Studentas> S;
+int sk = 0;
+int n = 0;
+double suma = 0;
+double egz = 0;
+vector<double> pazymiai;
+string yes = "t";
+string no = "n";
+string ka = "k";
+double number;
+double number5 = 0;
+string v="Vardas", p="Pavarde", vidd="Galutinis (vid)", medd="Galutinis (med)", line="-", nd = "ND", e = "Egz.";
+string FileName = "studentai10000.txt"; //Duomenu failo pavadinimas
+const char outFile[] = "rez.txt"; //Rezultatu failo pavadinimas
 
-int people[5];//globalus kintamasis
-const string fileInt = "studentai10000.txt";//naudoja tada, kai skaitoma is jau esancio failo
 
-void BubbleSort(vector<Students> &stud);
-void average(vector<Students> &stud);
-void mediana(vector<Students> &stud);
-void print1happy(vector<Students> &stud);
-void print1sad(vector<Students> &stud);
-void print2happy(vector<Students> &stud);
-void print2sad(vector<Students> &stud);
-void separateAvg(vector<Students> &stud);
-void separateMed(vector<Students> &stud);
+void ReadFromFile();
+void PrintBothAvg();
+void PrintBothMed();
+void PrintRez();
+void Separate(int n);
+double average();
+double mediana();
+void KnowND(int n);
+void UnknownND(int n);
+void KnownStud();
+void UnknownStud();
+void CreateFile();
+void questions();
+bool check(double number);
+void checkInput1(int choice);
+void checkInput2(int choice);
+void checkInput3(int choice);
+void checkInput4(int choice);
 void checkInput(char& choice);
 void checkInput(int &in);
-void checkFile1(int &input);
-void checkFile2(int &input);
-void checkNum(int &input);
-void createFile(int file, int marks);
-void random(int n, vector<int> &arr);
-void read(vector<Students> &stud);
-void addStudent(vector<Students> &stud);
+void BubbleSort();
