@@ -33,7 +33,7 @@ Mano palyginimas:
 
 # V1.0 skirta 2021.04.17
 
-[v1.0]() yra v0.5 papildymas. Programa nuo 
+[v1.0]() yra v0.5 papildymas. Programa nuo šios versijos programa rūšiuoja studentus į mokslinčius ir vargšelius 3 skirtingais būdais, taip leidžia išmatuoti rūšiavimo spartos priklausymą nuo rūšiavimo tipo.
 
 # Paleidimo instrukcija
 Programą geriausia pasileisti terminale (aš naudoju visual studio code) su šiomis komandomis:
