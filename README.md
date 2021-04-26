@@ -24,6 +24,7 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 **Tyrimas:**
 ![image](https://user-images.githubusercontent.com/78842487/116078575-76519100-a69f-11eb-877d-d75fec6db840.png)
 
+Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabdžiau ją), todėl rūšiavimo ir išvedimo apskaičiuoti nepavyko.
 
 *Programa yra 3 failuose `v04.cpp`, `funcc.cpp` ir `func2.h`*
 
