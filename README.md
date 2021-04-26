@@ -30,7 +30,7 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 *Programa yra 3 failuose `main5.cpp`, `func5.cpp` ir `func5.h`*
 
 Mano palyginimas:
-![image](https://user-images.githubusercontent.com/78842487/116101317-672a0d80-a6b6-11eb-9c46-3a54ae809678.png)
+![image](https://user-images.githubusercontent.com/78842487/116101872-e1f32880-a6b6-11eb-921b-0bf263dc59dd.png)
 
 Sistema: 
 ![image](https://user-images.githubusercontent.com/78842487/116100764-ebc85c00-a6b5-11eb-8348-94ad377a0d5c.png)
