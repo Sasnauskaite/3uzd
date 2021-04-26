@@ -21,6 +21,10 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 
 [v0.2](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.4) yra v0.3 papildymas. Nuo šios versijos programa pati gali sukurti šabloninį studentų failą, tuomet jį perskaito, apskaičiavusi galutinį balą išskirsto studentus į ,,mokslinčius" ir ,,nuskriaustuosius" ir išveda informaciją į failus su atitinkamais pavadinimais, taip pat programa apskaičiuoja, kiek ms ji užtrunka atlikdama užduotis (kurdama failą, jį skaitydama, išskirstydama studentus pagal galutinį balą bei išvesdama į atitinkamus failus).
 
+**Tyrimas:**
+![image](https://user-images.githubusercontent.com/78842487/116078575-76519100-a69f-11eb-877d-d75fec6db840.png)
+
+
 *Programa yra 3 failuose `v04.cpp`, `funcc.cpp` ir `func2.h`*
 
 # Paleidimo instrukcija
