@@ -21,8 +21,7 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 
 [v0.4](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.4) yra v0.3 papildymas. Nuo šios versijos programa pati gali sukurti šabloninį studentų failą, tuomet jį perskaito, apskaičiavusi galutinį balą išskirsto studentus į ,,mokslinčius" ir ,,nuskriaustuosius" ir išveda informaciją į failus su atitinkamais pavadinimais, taip pat programa apskaičiuoja, kiek ms ji užtrunka atlikdama užduotis (kurdama failą, jį skaitydama, išskirstydama studentus pagal galutinį balą bei išvesdama į atitinkamus failus).
 
-Tyrimas:
-
+**Tyrimas:**
 ![image](https://user-images.githubusercontent.com/78842487/116102017-fe8f6080-a6b6-11eb-9ac3-6993b124da04.png)
 
 Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabdžiau ją), todėl rūšiavimo ir išvedimo apskaičiuoti nepavyko.
@@ -35,10 +34,10 @@ Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabd�
 
 *Programa yra 3 failuose `main5.cpp`, `func5.cpp` ir `func5.h`*
 
-Mano palyginimas:
+**Mano palyginimas:**
 ![image](https://user-images.githubusercontent.com/78842487/116101872-e1f32880-a6b6-11eb-921b-0bf263dc59dd.png)
 
-Sistema: 
+**Sistema: **
 ![image](https://user-images.githubusercontent.com/78842487/116100764-ebc85c00-a6b5-11eb-8348-94ad377a0d5c.png)
 
 # Paleidimo instrukcija
