@@ -1,74 +1,194 @@
 #include "func5.h"
-
-void questions()
+template <class T>
+void questions(T& S)
 {
 	int answer1;
 	int kint = 0;
-	cout << "Ar norite:\n(1)Duomenis irasyti patys\n(2)Duomenis skaityti is failo\n(3)Sukurti nauja duomenu faila?\nJusu atsakymas: "; 
+	int answerr;
+	cout << "Ar norite:\n(1)Duomenis irasyti patys\n(2)Duomenis skaityti is failo\n(3)Sukurti nauja duomenu faila?\n(4)Atlikti spartos tyrima?\nJusu atsakymas: "; 
     cin >> answer1;
     checkInput1(answer1);
-	if (answer1 == 1)
+	if (answer1 == 1)//Duomenu irasymas patiems
 	{
-		UnknownStud();
-		BubbleSort();
-		PrintRez();
+		UnknownStud(S);
+		BubbleSort(S);
+	    PrintRez(S);
 	}
-	else if (answer1 == 2)
+	else if (answer1 == 2)//Skaitymas is esamo failo
 	{
-		ReadFromFile();
-		BubbleSort();
-		PrintRez();
+		ReadFromFile(S);
+	    BubbleSort(S);
+	    PrintRez(S);
 	}
-	else if (answer1 == 3)
+	else if (answer1 == 3)//Naujas duomenu failas
 	{
-		cout << "Kiek failu norite sugeneruoti? (nuo 1 iki 5): ";
-		cin >> kint;
-		for (int i = 0; i < kint; i++)
-		{
+	    cout << "Kiek failu norite sugeneruoti? (nuo 1 iki 5): ";
+	    cin >> kint;
+	    for (int i = 0; i < kint; i++)
+	    {
 	        cout << "Iveskite kiek bus studentu: ";
 	        cin >> n;
-			checkInput3(n);
-	        cout << "Iveskite kiek bus namu darbu pazymiu[nuo 1 iki 15]: ";
-	        cin >> sk;
-			checkInput4(sk);
-			char ats;
-			cout<< "Ar noretumete pamatyti vidurki(t) ar mediana(n)?\nJusu atsakymas: ";
-			cin>>ats;
-			checkInput(ats);
-			cout<<"Apdorojama "<<n<< " duomenu: "<<endl;
-	        auto start = std::chrono::steady_clock::now();
-			CreateFile();
-			cout << "Naujo failo sugeneravimas truko:" << std::setprecision(4)<<
-			std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
-			start = std::chrono::steady_clock::now();
-			ReadFromFile();
-			cout << "Sugeneruoto failo skaitymas truko:" << std::setprecision(4)<<
-			std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
-			cout<<"Skaiciavimai..."<<endl;
-			BubbleSort();
-			start = std::chrono::steady_clock::now();
-			Separate(n);
-			cout << "Studentu isrusiavimas truko:" << std::setprecision(4)<<
-			std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
-			if(tolower(ats)=='t')
+	    	checkInput3(n);
+            cout << "Iveskite kiek bus namu darbu pazymiu[nuo 1 iki 15]: ";
+            cin >> sk;
+		    checkInput4(sk);
+		    char ats;
+		    cout<< "Ar noretumete pamatyti vidurki(t) ar mediana(n)?\nJusu atsakymas: ";
+		    cin>>ats;
+		    checkInput(ats);
+   			cout<<"Apdorojama "<<n<< " duomenu: "<<endl;
+            auto start = std::chrono::steady_clock::now();
+	    	CreateFile();
+		    cout << "Naujo failo sugeneravimas truko:" << std::setprecision(4)<<
+   			std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+    		start = std::chrono::steady_clock::now();
+	    	ReadFromFile(S);
+		    cout << "Sugeneruoto failo skaitymas truko:" << std::setprecision(4)<<
+		    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+		    cout<<"Skaiciavimai..."<<endl;
+		    BubbleSort(S);
+		    start = std::chrono::steady_clock::now();
+		    Separate(S, n);
+		    cout << "Studentu isrusiavimas truko:" << std::setprecision(4)<<
+		    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+		    if(tolower(ats)=='t')
+		    {
+		    	start = std::chrono::steady_clock::now();
+		        PrintBothAvg(S);
+		        cout << "Studentu atspausdinimas truko:" << std::setprecision(4)<<
+		        std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+		    }
+		    else if(tolower(ats)=='n')
+		    {
+		    	start = std::chrono::steady_clock::now();
+		        PrintBothMed(S);
+		        cout << "Studentu atspausdinimas truko:" << std::setprecision(4)<<
+		        std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+		    }	
+		}
+	}
+	else if(answer1 == 4)//Tyrimas
+	{
+		cout<<"Norite matyti vidurki(t) ar mediana(n)?\n";
+		char choice;
+		cin>>choice;
+		checkInput(choice);
+		checkInput3(studs);
+		checkInput4(mrks);
+		char ats;
+		cout<<"Apdorojama "<<studs<< " duomenu: \n";
+		n = studs;
+		sk = mrks;
+	    auto start = std::chrono::steady_clock::now();
+		CreateFile();
+		cout << "Naujo failo sugeneravimas truko:" << std::setprecision(4)<<
+		std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+		
+		for(int n=0; n<3; n++)
+		{
+			if(n==0)
 			{
-				start = std::chrono::steady_clock::now();
-			    PrintBothAvg();
-			    cout << "Studentu atspausdinimas truko:" << std::setprecision(4)<<
-			    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+				vector<Studentas> S;
+				cout<<"------------------------------\nVECTOR KONTEINERIS\n";
+				auto start1 = std::chrono::steady_clock::now();
+	    	    start = std::chrono::steady_clock::now();
+	        	ReadFromFile(S);
+				cout << "Sugeneruoto failo skaitymas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+	    	
+	        	start = std::chrono::steady_clock::now();
+	        	Separate(S, n);
+	        	cout << "Studentu isrusiavimas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+				if(choice=='t')
+				{
+					PrintBothAvg(S);
+				}
+				else if(choice=='n')
+				{
+					PrintBothMed(S);
+				}
+	        	cout << "Viso abi uzduotys ir skaiciavimai truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start1).count() << " ms" << endl;
 			}
-			else if(tolower(ats)=='n')
-			{
-				start = std::chrono::steady_clock::now();
-			    PrintBothMed();
-			    cout << "Studentu atspausdinimas truko:" << std::setprecision(4)<<
-			    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
-			}
-			
+			if(n==1)
+		    {
+		    	deque<Studentas> S;
+		        cout<<"------------------------------\nDEQUE KONTEINERIS\n";
+	        	auto start1 = std::chrono::steady_clock::now();
+	        	start = std::chrono::steady_clock::now();
+	        	ReadFromFile(S);
+	        	cout << "Sugeneruoto failo skaitymas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+	        	
+	        	start = std::chrono::steady_clock::now();
+	        	Separate(S, n);
+	        	cout << "Studentu isrusiavimas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+				if(choice=='t')
+				{
+					PrintBothAvg(S);
+				}
+				else if(choice=='n')
+				{
+					PrintBothMed(S);
+				}
+	        	cout << "Viso abi uzduotys ir skaiciavimai truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start1).count() << " ms" << endl;
+		    }
+		    if(n==2)
+	     	{
+	        	list<Studentas> S;
+	        	cout<<"------------------------------\nLIST KONTEINERIS\n";
+	        	auto start1 = std::chrono::steady_clock::now();
+	        	start = std::chrono::steady_clock::now();
+	        	ReadToList(S);
+	        	cout << "Sugeneruoto failo skaitymas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+	    	
+	        	start = std::chrono::steady_clock::now();
+	        	SeparateList(S, n);
+	        	cout << "Studentu isrusiavimas truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
+				if(choice=='t')
+				{
+					PrintListAvg(S);
+				}
+				else if(choice=='n')
+				{
+					PrintListMed(S);
+				}
+	        	cout << "Viso abi uzduotys ir skaiciavimai truko:" << std::setprecision(4)<<
+	        	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start1).count() << " ms" << endl;
+		    }
+	    }
+	}
+}
+template <class T>
+void SeparateList(T& S, int n)
+{
+	for (Studentas x : S)
+	{
+		if(x.avg>=5)
+		{
+			x.skolaAvg = 0;
+		}
+		else if(x.avg<5)
+		{
+			x.skolaAvg = 1;
+		}
+		if(x.med>=5)
+		{
+			x.skolaMed = 0;
+		}
+		else if(x.med<5)
+		{
+			x.skolaMed = 1;
 		}
 	}
 }
-void Separate(int n)
+template <class T>
+void Separate(T& S, int n)
 {
 	for(int i=0; i<n; i++)
 	{
@@ -90,7 +210,8 @@ void Separate(int n)
 		}
 	}
 }
-void PrintRez()
+template <class T>
+void PrintRez(T& S)
 {
 	std::ofstream fr(outFile);
 	fr <<std::setw(20) << v << std::setw(20) << p << std::setw(15) << vidd << std::setw(15) <<
@@ -107,7 +228,8 @@ void PrintRez()
 	}
 	fr.close();
 }
-void PrintBothAvg()
+template <class T>
+void PrintBothAvg(T& S)
 {
 	std::ofstream out1("Galvotukai.txt");
 	std::ofstream out2("Vargsiukai.txt");
@@ -139,7 +261,8 @@ void PrintBothAvg()
 	out1.close();
 	out2.close();
 }
-void PrintBothMed()
+template <class T>
+void PrintBothMed(T& S)
 {
 	std::ofstream out1("Galvotukai.txt");
 	std::ofstream out2("Vargsiukai.txt");
@@ -171,7 +294,80 @@ void PrintBothMed()
 	out1.close();
 	out2.close();
 }
-void UnknownStud()
+template <class T>
+void PrintListAvg(T& S)
+{
+	std::ofstream out1("GalvotukaiList.txt");
+    std::ofstream out2("VargsiukaiList.txt");
+	out1 << std::left<<std::setw(20) << v << std::setw(20) << p << std::setw(20) << vidd << endl;
+    for(int i=0; i<70; i++)
+    {
+        out1 << line;
+    }
+    out1 << endl;
+    out2 << std::left<<std::setw(20) << v << std::setw(20) << p << std::setw(20) << vidd << endl;
+    for(int i=0; i<70; i++)
+    {
+        out2 << line;
+    }
+    out2 << endl;
+	for(Studentas student : S)
+	{
+    	//for (int i = 0; i < n; i++)
+    	//{
+    		if (student.skolaAvg == 0)
+    		{
+                out1 <<std::left<<std::setw(20) << student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) <<
+    			student.avg << endl;
+    		}
+    		else if (student.skolaAvg == 1)
+	    	{
+	    		out2 <<std::left<< std::setw(20) <<student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) << 
+	    		student.avg << endl;
+	    	}
+    	//}
+	}
+	out1.close();
+	out2.close();
+}
+template <class T>
+void PrintListMed(T& S)
+{
+	std::ofstream out1("GalvotukaiList.txt");
+    std::ofstream out2("VargsiukaiList.txt");
+	out1 << std::left<<std::setw(20) << v << std::setw(20) << p << std::setw(20) << medd << endl;
+    for(int i=0; i<70; i++)
+    {
+        out1 << line;
+    }
+    out1 << endl;
+    out2 << std::left<<std::setw(20) << v << std::setw(20) << p << std::setw(20) << medd << endl;
+    for(int i=0; i<70; i++)
+    {
+        out2 << line;
+    }
+    out2 << endl;
+	for(Studentas student : S)
+	{
+    	for (int i = 0; i < n; i++)
+    	{
+    		if (student.skolaMed == 0)
+    		{
+                out1 <<std::left<<std::setw(20) << student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) <<
+    			student.med << endl;
+    		}
+    		else if (student.skolaMed == 1)
+	    	{
+	    		out2 <<std::left<< std::setw(20) <<student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) << 
+	    		student.med << endl;
+	    	}
+    	}
+	}
+	out1.close();
+	out2.close();
+}
+template <class T>
+void UnknownStud(T& S)
 {
 	string input1, input2, answer3, answer4, answer5, answer6;
 	int number3 = 0;
@@ -190,11 +386,11 @@ void UnknownStud()
 		cin >> answer4;
 		if (answer4 == yes)
 		{
-			KnowND(n);
+			KnowND(S, n);
 		}
 		else if (answer4 == no)
 		{
-			UnknownND(n);
+			UnknownND(S, n);
 		}
 	}
 	else if (answer3 == no)
@@ -220,7 +416,7 @@ void UnknownStud()
 			if (check(egz) == false)
 			{
 				cout << "Ivedete netinkama skaiciu, iveskite studento informacija is naujo" << endl;
-				UnknownStud();
+				UnknownStud(S);
 			}
 		}
 		else if (answer5 == no)
@@ -237,10 +433,11 @@ void UnknownStud()
 	cin >> answer6;
 	if (answer6 == yes)
 	{
-		UnknownStud();
+		UnknownStud(S);
 	}
 }
-void KnowND(int a)
+template <class T>
+void KnowND(T& S, int a)
 {
 	char answer5;
 	cout << "Iveskite kiek bus namu darbu pazymiu: ";
@@ -280,7 +477,8 @@ void KnowND(int a)
 	S[a].avg = average();
 	S[a].med = mediana();
 }
-void UnknownND(int a)
+template <class T>
+void UnknownND(T& S, int a)
 {
 	char answer5;
 	cout << "Veskite kiek norite namu darbu pazymiu, kai noresite baigti vesti, iveskite '00': ";
@@ -321,8 +519,10 @@ void UnknownND(int a)
 	S[a].avg = average();
 	S[a].med = mediana();
 }
-void ReadFromFile()
+template <class T>
+void ReadFromFile(T& S)
 {
+	S.clear();
 	std::ifstream in(FileName);
 	string x;
 	int y;
@@ -357,6 +557,55 @@ void ReadFromFile()
 			S[i].avg = average();
 			S[i].med = mediana();
 			n = i;
+		}
+		n = n + 1;
+		in.close();
+	}
+	catch (int ex3)
+	{
+		cout << "Duomenu failas nerastas" << endl;
+		exit;
+	}
+}
+template <class T>
+void ReadToList(T& S)
+{
+	Studentas student;
+	S.clear();
+	std::ifstream in(FileName);
+	string x;
+	int y;
+	try {
+		if (!in)
+		{
+			throw 1;
+		}
+		for (int i = 0; i < 100; i++)
+		{
+			in >> x;
+			if (x == "Egz.")
+			{
+				sk = i - 2;
+				break;
+			}
+		}
+		for (int i = 0; !in.eof(); i++)
+		{
+			suma = 0;
+			in >> student.name;
+			in >> student.lastname;
+			pazymiai.clear();
+			for (int j = 0; j < sk; j++)
+			{
+				in >> y;
+				suma = suma + y;
+				pazymiai.push_back(y);
+			}
+			in >> egz;
+			student.avg = average();
+			student.med = mediana();
+			n = i;
+			S.push_back(student);
 		}
 		n = n + 1;
 		in.close();
@@ -409,18 +658,18 @@ double mediana()
 void CreateFile()
 {
 	string file;
-	file = "kursiokai" + std::to_string(n);
+	file = "kurs" + std::to_string(n);
 	file += ".txt";
 	FileName = file;
 	std::ofstream out(file);
 	out << std::left << std::setw(20) << v << std::setw(20) << p;
-	for (int i = 1; i < sk + 1; i++)
+	for (int i = 1; i < sk+1; i++)
 	{
 		out << std::setw(7) << nd + std::to_string(i);
 	}
 	out << std::setw(7) << e << endl;
 	srand(time(NULL));
-	for (int i = 1; i < n + 1; i++)
+	for (int i = 1; i < n+1; i++)
 	{
 		out << std::left << std::setw(20) << v + std::to_string(i) << std::setw(20) << p + std::to_string(i);
 		for (int j = 0; j < sk; j++)
@@ -452,16 +701,16 @@ void checkInput(char& choice)
 }
 void checkInput1(int choice)
 {
-    while (cin.fail() || choice < 1 || choice > 3)
+    while (cin.fail() || choice < 1 || choice > 4)
     {
 		if (cin.fail())
         {
             cout << "Ivestis netinkama (Ivedete raide)\n";
-            cout <<"Galimi pasirinkimai:\n(1)Irasysiu pats\n(2)skaityti is failo\n(3)Sugeneruoti nauja duomenu faila\nJusu atsakymas: ";
+            cout <<"Galimi pasirinkimai:\n(1)Irasysiu pats\n(2)skaityti is failo\n(3)Sugeneruoti nauja duomenu faila\n(4)Atlikti konteineriu spartos tyrima\nJusu atsakymas: ";
         }
         else if(choice < 1 || choice > 3)
         {
-            cout << "Turite pasirinkti is intervalo [1;3]\n";
+            cout << "Turite pasirinkti is intervalo [1;4]\n";
             cout <<"Galimi pasirinkimai:\n(1)Irasysiu pats\n(2)skaityti is failo\n(3)Sugeneruoti nauja duomenu faila\nJusu atsakymas: ";
         }
 		cout << "Iveskite savo pasirinkima: ";
@@ -524,7 +773,26 @@ void checkInput4(int choice)
 		cin >> choice;
 	}
 }
-void BubbleSort()
+void checkInput5(int choice)
+{
+    while (cin.fail() || choice < 1 || choice > 3)
+    {
+		if (cin.fail())
+        {
+            cout << "Ivestis netinkama (Ivedete raide)\n";
+            cout <<"Galimi pasirinkimai:\n(1)vector\n(2)deque\n(3)list\nJusu atsakymas: ";
+        }
+        else if(choice < 1 || choice > 3)
+        {
+            cout << "Turite pasirinkti is intervalo [1;3]\n";
+            cout <<"Galimi pasirinkimai:\n(1)vector\n(2)deque\n(3)list\nJusu atsakymas: ";
+        }
+		cout << "Iveskite savo pasirinkima: ";
+		cin >> choice;
+	}
+}
+template <class T>
+void BubbleSort(T& S)
 {
 	for (int i = 0; i < S.size(); i++)
 	{
@@ -535,13 +803,13 @@ void BubbleSort()
 				string a = S[i].lastname;
 				S[i].lastname = S[j].lastname;
 				S[j].lastname = a;
-                string b = S[i].name;
+                                string b = S[i].name;
 				S[i].name = S[j].name;
 				S[j].name = b;
-                double c = S[i].avg;
+                                double c = S[i].avg;
 				S[i].avg = S[j].avg;
 				S[j].avg = c;
-                double d = S[i].med;
+                                double d = S[i].med;
 				S[i].med = S[j].med;
 				S[j].med = d;
 			}
