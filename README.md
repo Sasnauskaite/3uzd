@@ -36,9 +36,11 @@ Programa su 1000000 fail≈≥ dirbo labai ilgai (daugiau nei 15min iki kol sustabd≈
 *Programa yra 3 failuose `main5.cpp`, `func5.cpp` ir `func5.h`*
 
 **Mano palyginimas:**
+
 ![image](https://user-images.githubusercontent.com/78842487/116101872-e1f32880-a6b6-11eb-921b-0bf263dc59dd.png)
 
 **Sistema: **
+
 ![image](https://user-images.githubusercontent.com/78842487/116100764-ebc85c00-a6b5-11eb-8348-94ad377a0d5c.png)
 
 # Paleidimo instrukcija
