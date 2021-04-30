@@ -169,19 +169,19 @@ void SeparateList(T& S, int n)
 {
 	for (Studentas x : S)
 	{
-		if(x.avg>=5)
+		if(x.avg>=5.00)
 		{
 			x.skolaAvg = 0;
 		}
-		else if(x.avg<5)
+		else if(x.avg<5.00)
 		{
 			x.skolaAvg = 1;
 		}
-		if(x.med>=5)
+		if(x.med>=5.00)
 		{
 			x.skolaMed = 0;
 		}
-		else if(x.med<5)
+		else if(x.med<5.00)
 		{
 			x.skolaMed = 1;
 		}
@@ -190,21 +190,21 @@ void SeparateList(T& S, int n)
 template <class T>
 void Separate(T& S, int n)
 {
-	for(int i=0; i<n; i++)
+	for(int i=0; i<studs; i++)
 	{
-		if(S[i].avg>=5)
+		if(S[i].avg>=5.00)
 		{
 			S[i].skolaAvg = 0;
 		}
-		else if(S[i].avg<5)
+		else if(S[i].avg<5.00)
 		{
 			S[i].skolaAvg = 1;
 		}
-		if(S[i].med>=5)
+		if(S[i].med>=5.00)
 		{
 			S[i].skolaMed = 0;
 		}
-		else if(S[i].med<5)
+		else if(S[i].med<5.00)
 		{
 			S[i].skolaMed = 1;
 		}
