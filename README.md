@@ -70,6 +70,6 @@ V0.5-> `g++ main5.cpp -o test` (norint, kad veiktų ši versija jums reikia tur�
 
 Po to tereikia paleisti su komanda: `./test`
 
-V1.0-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. func5.cpp, func5.h, print.cpp ir makefile).
+V1.0-> `mingw32-make` [Taip makefile veikia per windows] (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. func5.cpp, func5.h, print.cpp ir makefile).
 
 Tada programa pradeda veikti ir jums belieka atsakyti į jos užduodamus klausimus (atsakyti reikia t="taip" arba n="ne).
