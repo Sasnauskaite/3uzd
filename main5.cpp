@@ -2,6 +2,7 @@
 
 int main()
 {
-    questions();
+    vector<Studentas> S;
+    questions(S);
     return 0;
 }
