@@ -193,7 +193,7 @@ void tyrimas2()
 	cout << "Naujo failo sugeneravimas truko:" << std::setprecision(4)<<
 	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
 	for(int j=0; j<3; j++)
-	{/*
+	{
 		if(j==0)
 		{
 			vector<Studentas> S;
@@ -297,7 +297,7 @@ void tyrimas2()
         	std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start1).count() << " ms" << endl;
 			S.clear();
 			Bad.clear();
-	    }*/
+	    }
 	    if(j==2)
      	{
         	list<Studentas> S;
