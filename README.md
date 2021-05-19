@@ -45,7 +45,13 @@ Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabd�
 
 # V1.0 skirta 2021.04.17
 
-[v1.0]() yra v0.5 papildymas. Programa nuo šios versijos programa rūšiuoja studentus į mokslinčius ir vargšelius 3 skirtingais būdais, taip leidžia išmatuoti rūšiavimo spartos priklausymą nuo rūšiavimo tipo.
+[v1.0](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v1.0) yra v0.5 papildymas. Programa nuo šios versijos programa rūšiuoja studentus į mokslinčius ir vargšelius 3 skirtingais būdais, taip leidžia išmatuoti rūšiavimo spartos priklausymą nuo rūšiavimo tipo.
+
+*Programa yra 5 failuose 'main5.cpp', 'func5.cpp', 'func5.h', 'print.cpp' ir 'makefile'.
+
+**Tyrimas**
+
+![image](https://user-images.githubusercontent.com/78842487/118854802-c1954300-b8dd-11eb-85c4-c7cab8f05dea.png)
 
 # Paleidimo instrukcija
 Programą geriausia pasileisti terminale (aš naudoju visual studio code) su šiomis komandomis:
