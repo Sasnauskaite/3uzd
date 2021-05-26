@@ -30,7 +30,25 @@ struct Studentas
     int skolaAvg;
     int skolaMed;
 };
+
 int studs = 100000, mrks = 5; //Tyrimo studentu skaicius ir pazymiu skaicius
+
+struct Galvocius
+{
+	string name;
+	string lastname;
+	double avg;
+	double med;
+};
+struct Vargselis
+{
+	string name;
+	string lastname;
+	double avg;
+	double med;
+};
+int studs = 1000000, mrks = 5; //Tyrimo studentu skaicius ir pazymiu skaicius
+double d = 5.00000;
 string FileName = "studentai10000.txt"; //Duomenu failo pavadinimas
 const char outFile[] = "rez.txt"; //Rezultatu failo pavadinimas
 int sk = 0;
@@ -50,10 +68,56 @@ template <class T>
 void PrintBothAvg(T& S);
 template <class T>
 void PrintBothMed(T& S);
+
 template <class T>
 void PrintRez(T& S);
 template <class T>
 void Separate(T& S, int n);
+
+//--------------vector
+template <class T>
+void PrintVectorAvg(T& S);
+template <class T>
+void PrintVectorMed(T& S);
+template <class G, class B>
+void PrintVectorAvg1(G& Good, B& Bad);
+template <class G, class B>
+void PrintVectorMed1(G& Good, B& Bad);
+template <class T, class B>
+void PrintVectorAvg2(T& S, B& Bad);
+template <class T, class B>
+void PrintVectorMed2(T& S, B& Bad);
+//------------Deque
+template <class T>
+void PrintDequeAvg(T& S);
+template <class T>
+void PrintDequeMed(T& S);
+template <class G, class B>
+void PrintDequeAvg1(G& Good, B& Bad);
+template <class G, class B>
+void PrintDequeMed1(G& Good, B& Bad);
+template <class T, class B>
+void PrintDequeAvg2(T& S, B& Bad);
+template <class T, class B>
+void PrintDequeMed2(T& S, B& Bad);
+//---------------List
+template <class T, class B>
+void PrintListAvg1(T& Good, B& Bad);
+template <class T, class B>
+void PrintListMed1(T& Good, B& Bad);
+template <class T, class B>
+void PrintListAvg2(T& S, B& Bad);
+template <class T, class B>
+void PrintListMed2(T& S, B& Bad);
+template <class T, class G, class B>
+void SeparateList1(T& S, G& Good, B& Bad, char choice);
+template <class T, class B>
+void SeparateList2(T& S, B& Bad, char choice);
+//---------------
+template <class T>
+void PrintRez(T& S);
+template <class T>
+void Separate(T& S);
 double average();
 double mediana();
 template <class T>
@@ -77,12 +141,21 @@ void checkInput(char& choice);
 void checkInput(int &in);
 template <class T>
 void BubbleSort(T& S);
-
 template <class T>
 void ReadToList(T& S);
 template <class T>
 void SeparateList(T& S, int n);
+template <class T, class G, class B>
+void Separate1(T& S, G& Good, B& Bad, char choice);
+template <class T, class B>
+void Separate2(T& S, B& Bad, char choice);
+template <class T>
+void ReadToList(T& S);
+template <class T>
+void SeparateList(T& S);
 template <class T>
 void PrintListAvg(T& S);
 template <class T>
 void PrintListMed(T& S);
+void tyrimas1();
+void tyrimas2();
