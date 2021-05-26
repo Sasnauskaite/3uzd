@@ -1,3 +1,16 @@
+# 3 užduotis
+
+# V1.1 skirta 2021.04.24
+
+[v1.1](https://github.com/Sasnauskaite/3uzduotis/releases/tag/V1.1) yra v1.1 papildymas. Programa nuo šios versijos naudoja nebe struktūras (struct), o klases (class).
+
+*Programa yra 6 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`,  `func5.h`, `print.cpp` ir `makefile`.
+
+**Pastebėjimas**
+Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką.
+
+![oop 1 1](https://user-images.githubusercontent.com/78842487/119732484-ea3eaf00-be80-11eb-801e-7455e695a39c.png)
+
 # 2UŽDUOTIS
 
 # V0.1 skirta 2021.02.20
