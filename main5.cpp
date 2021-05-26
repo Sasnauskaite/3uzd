@@ -1,4 +1,4 @@
-#include "func5.cpp"
+#include "Studentas.cpp"
 
 int main()
 {

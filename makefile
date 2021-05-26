@@ -3,7 +3,7 @@ main:
 	./test
 
 funkcijos:
-	g++ -c func5.cpp print.cpp
+	g++ -c print.cpp Studentas.cpp
 
 clean:
-	del func5.o print.o test
+	del print.o Studentas.o test

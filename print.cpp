@@ -12,8 +12,8 @@ void PrintRez(T& S)
 	string eil;
 	for (auto &a : S)
 	{
-		fr << std::setw(20) << a.name << std::setw(20) << a.lastname << std::setw(20) << std::setprecision(3) << a.avg << 
-		std::setw(20) << std::setprecision(3) << a.med << endl;
+		fr << std::setw(20) << a.get_name() << std::setw(20) << a.get_lastname() << std::setw(20) << std::setprecision(3) << a.get_avg() << 
+		std::setw(20) << std::setprecision(3) << a.get_med() << endl;
 	}
 	fr.close();
 }
@@ -36,15 +36,15 @@ void PrintBothAvg(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaAvg == 0)
+		if (S[i].get_skolaAvg() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].avg << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_avg() << endl;
 		}
-		else if (S[i].skolaAvg == 1)
+		else if (S[i].get_skolaAvg() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].avg << endl;
+			out2 <<std::left<< std::setw(20) <<S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+			S[i].get_avg() << endl;
 		}
 	}
 	out1.close();
@@ -69,15 +69,15 @@ void PrintBothMed(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaMed == 0)
+		if (S[i].get_skolaMed() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].med << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
-		else if (S[i].skolaMed == 1)
+		else if (S[i].get_skolaMed() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].med << endl;
+			out2 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
 	}
 	out1.close();
@@ -102,15 +102,15 @@ void PrintVectorAvg(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaAvg == 0)
+		if (S[i].get_skolaAvg() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].avg << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_avg() << endl;
 		}
-		else if (S[i].skolaAvg == 1)
+		else if (S[i].get_skolaAvg() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].avg << endl;
+			out2 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_avg() << endl;
 		}
 	}
 	out1.close();
@@ -135,15 +135,15 @@ void PrintVectorMed(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaMed == 0)
+		if (S[i].get_skolaMed() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].med << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
-		else if (S[i].skolaMed == 1)
+		else if (S[i].get_skolaMed() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].med << endl;
+			out2 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
 	}
 	out1.close();
@@ -168,15 +168,15 @@ void PrintDequeAvg(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaAvg == 0)
+		if (S[i].get_skolaAvg() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].avg << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_avg() << endl;
 		}
-		else if (S[i].skolaAvg == 1)
+		else if (S[i].get_skolaAvg() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].avg << endl;
+			out2 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_avg() << endl;
 		}
 	}
 	out1.close();
@@ -201,15 +201,15 @@ void PrintDequeMed(T& S)
 	out2 << endl;
 	for (int i = 0; i < studs; i++)
 	{
-		if (S[i].skolaMed == 0)
+		if (S[i].get_skolaMed() == 0)
 		{
-            out1 <<std::left<<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) <<
-			S[i].med << endl;
+            out1 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
-		else if (S[i].skolaMed == 1)
+		else if (S[i].get_skolaMed() == 1)
 		{
-			out2 <<std::left<< std::setw(20) <<S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << 
-			S[i].med << endl;
+			out2 <<std::left<<std::setw(20) << S[i].get_name() << std::setw(20) << S[i].get_lastname() << std::setw(20) << std::setprecision(3) <<
+			S[i].get_med() << endl;
 		}
 	}
 	out1.close();
@@ -234,13 +234,13 @@ void PrintVectorAvg1(G& Good, B& Bad)
 	out2 << endl;
 	for (int i = 0; i < Good.size(); i++)
 	{
-        out1 <<std::left<<std::setw(20) << Good[i].name << std::setw(20) << Good[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Good[i].avg << endl;
+        out1 <<std::left<<std::setw(20) << Good[i].get_name() << std::setw(20) << Good[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Good[i].get_avg() << endl;
     }
     for (int i = 0; i < Bad.size(); i++)
     {
-		out2 <<std::left<< std::setw(20) <<Bad[i].name << std::setw(20) << Bad[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Bad[i].avg << endl;
+		out2 <<std::left<< std::setw(20) <<Bad[i].get_name() << std::setw(20) << Bad[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Bad[i].get_avg() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -264,13 +264,13 @@ void PrintVectorMed1(G& Good, B& Bad)
 	out2 << endl;
 	for (int i = 0; i < Good.size(); i++)
 	{
-        out1 <<std::left<<std::setw(20) << Good[i].name << std::setw(20) << Good[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Good[i].med << endl;
+        out1 <<std::left<<std::setw(20) << Good[i].get_name() << std::setw(20) << Good[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Good[i].get_med() << endl;
     }
     for (int i = 0; i < Bad.size(); i++)
     {
-		out2 <<std::left<< std::setw(20) <<Bad[i].name << std::setw(20) << Bad[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Bad[i].med << endl;
+		out2 <<std::left<< std::setw(20) <<Bad[i].get_name() << std::setw(20) << Bad[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Bad[i].get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -294,13 +294,13 @@ void PrintDequeAvg1(G& Good, B& Bad)
 	out2 << endl;
 	for (int i = 0; i < Good.size(); i++)
 	{
-        out1 <<std::left<<std::setw(20) << Good[i].name << std::setw(20) << Good[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Good[i].avg << endl;
+        out1 <<std::left<<std::setw(20) << Good[i].get_name() << std::setw(20) << Good[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Good[i].get_avg() << endl;
     }
     for (int i = 0; i < Bad.size(); i++)
     {
-		out2 <<std::left<< std::setw(20) <<Bad[i].name << std::setw(20) << Bad[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Bad[i].avg << endl;
+		out2 <<std::left<< std::setw(20) <<Bad[i].get_name() << std::setw(20) << Bad[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Bad[i].get_avg() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -324,13 +324,13 @@ void PrintDequeMed1(G& Good, B& Bad)
 	out2 << endl;
 	for (int i = 0; i < Good.size(); i++)
 	{
-        out1 <<std::left<<std::setw(20) << Good[i].name << std::setw(20) << Good[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Good[i].med << endl;
+        out1 <<std::left<<std::setw(20) << Good[i].get_name() << std::setw(20) << Good[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Good[i].get_med() << endl;
     }
     for (int i = 0; i < Bad.size(); i++)
     {
-		out2 <<std::left<< std::setw(20) <<Bad[i].name << std::setw(20) << Bad[i].lastname << std::setw(20) << std::setprecision(3) << 
-        Bad[i].med << endl;
+		out2 <<std::left<< std::setw(20) <<Bad[i].get_name() << std::setw(20) << Bad[i].get_lastname() << std::setw(20) << std::setprecision(3) << 
+        Bad[i].get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -354,16 +354,16 @@ void PrintVectorAvg2(T& S, B& Bad)
 	out2 << endl;
 	for (auto &a : S)
 	{
-        if(a.med>= 5.00)
+        if(a.get_med()>= 5.00)
 		{
-			out1 <<std::left<<std::setw(20) << a.name << std::setw(20) << a.lastname << std::setw(20) << std::setprecision(3) << 
-            a.avg << endl;
+			out1 <<std::left<<std::setw(20) << a.get_name() << std::setw(20) << a.get_lastname() << std::setw(20) << std::setprecision(3) << 
+            a.get_avg() << endl;
 		}
     }
     for (auto &b : Bad)
     {
-		out2 <<std::left<< std::setw(20) <<b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) << 
-        b.avg << endl;
+		out2 <<std::left<< std::setw(20) <<b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) << 
+        b.get_avg() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -387,16 +387,16 @@ void PrintVectorMed2(T& S, B& Bad)
 	out2 << endl;
 	for (auto &a : S)
 	{
-        if(a.med>= 5.00)
+        if(a.get_med()>= 5.00)
 		{
-			out1 <<std::left<<std::setw(20) << a.name << std::setw(20) << a.lastname << std::setw(20) << std::setprecision(3) << 
-            a.med << endl;
+			out1 <<std::left<<std::setw(20) << a.get_name() << std::setw(20) << a.get_lastname() << std::setw(20) << std::setprecision(3) << 
+            a.get_med() << endl;
 		}
     }
     for (auto &b : Bad)
     {
-		out2 <<std::left<< std::setw(20) <<b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) << 
-        b.med << endl;
+		out2 <<std::left<< std::setw(20) <<b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) << 
+        b.get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -420,16 +420,16 @@ void PrintDequeAvg2(T& S, B& Bad)
 	out2 << endl;
 	for (auto &a : S)
 	{
-        if(a.med>= 5.00)
+        if(a.get_med()>= 5.00)
 		{
-			out1 <<std::left<<std::setw(20) << a.name << std::setw(20) << a.lastname << std::setw(20) << std::setprecision(3) << 
-            a.avg << endl;
+			out1 <<std::left<<std::setw(20) << a.get_name() << std::setw(20) << a.get_lastname() << std::setw(20) << std::setprecision(3) << 
+            a.get_avg() << endl;
 		}
     }
     for (auto &b : Bad)
     {
-		out2 <<std::left<< std::setw(20) <<b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) << 
-        b.avg << endl;
+		out2 <<std::left<< std::setw(20) <<b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) << 
+        b.get_avg() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -453,16 +453,16 @@ void PrintDequeMed2(T& S, B& Bad)
 	out2 << endl;
 	for (auto &a : S)
 	{
-		if(a.med>= 5.00)
+		if(a.get_med()>= 5.00)
 		{
-			out1 <<std::left<<std::setw(20) << a.name << std::setw(20) << a.lastname << std::setw(20) << std::setprecision(3) << 
-            a.med << endl;
+			out1 <<std::left<<std::setw(20) << a.get_name() << std::setw(20) << a.get_lastname() << std::setw(20) << std::setprecision(3) << 
+            a.get_med() << endl;
 		}
     }
     for (auto &b : Bad)
     {
-		out2 <<std::left<< std::setw(20) <<b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) << 
-        b.med << endl;
+		out2 <<std::left<< std::setw(20) <<b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) << 
+        b.get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -488,15 +488,15 @@ void PrintListAvg(T& S)
 	{
     	for (int i = 0; i < n; i++)
     	{
-    		if (student.skolaAvg == 0)
+    		if (student.get_skolaAvg() == 0)
     		{
-                out1 <<std::left<<std::setw(20) << student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) <<
-    			student.avg << endl;
+                out1 <<std::left<<std::setw(20) << student.get_name() << std::setw(20) << student.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    			student.get_avg() << endl;
     		}
-    		else if (student.skolaAvg == 1)
+    		else if (student.get_skolaAvg() == 1)
 	    	{
-	    		out2 <<std::left<< std::setw(20) <<student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) << 
-	    		student.avg << endl;
+	    		out2 <<std::left<<std::setw(20) << student.get_name() << std::setw(20) << student.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    			student.get_avg() << endl;
 	    	}
     	}
 	}
@@ -524,15 +524,15 @@ void PrintListMed(T& S)
 	{
     	for (int i = 0; i < n; i++)
     	{
-    		if (student.skolaMed == 0)
+    		if (student.get_skolaMed() == 0)
     		{
-                out1 <<std::left<<std::setw(20) << student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) <<
-    			student.med << endl;
+                out1 <<std::left<<std::setw(20) << student.get_name() << std::setw(20) << student.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    			student.get_med() << endl;
     		}
-    		else if (student.skolaMed == 1)
+    		else if (student.get_skolaMed() == 1)
 	    	{
-	    		out2 <<std::left<< std::setw(20) <<student.name << std::setw(20) << student.lastname << std::setw(20) << std::setprecision(3) << 
-	    		student.med << endl;
+	    		out2 <<std::left<<std::setw(20) << student.get_name() << std::setw(20) << student.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    			student.get_med() << endl;
 	    	}
     	}
 	}
@@ -560,13 +560,13 @@ void PrintListAvg1(G& Good, B& Bad)
     out2 << endl;
 	for(Galvocius g : Good)
 	{
-    	out1 <<std::left<<std::setw(20) << g.name << std::setw(20) << g.lastname << std::setw(20) << std::setprecision(3) <<
-    	g.avg << endl;
+    	out1 <<std::left<<std::setw(20) << g.get_name() << std::setw(20) << g.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	g.get_avg() << endl;
 	}
 	for(Vargselis b : Bad)
 	{
-    	out2 <<std::left<<std::setw(20) << b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) <<
-    	b.avg << endl;
+    	out2 <<std::left<<std::setw(20) << b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	b.get_avg() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -590,13 +590,13 @@ void PrintListMed1(G& Good, B& Bad)
     out2 << endl;
 	for(Galvocius g : Good)
 	{
-    	out1 <<std::left<<std::setw(20) << g.name << std::setw(20) << g.lastname << std::setw(20) << std::setprecision(3) <<
-    	g.med << endl;
+    	out1 <<std::left<<std::setw(20) << g.get_name() << std::setw(20) << g.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	g.get_med() << endl;
 	}
 	for(Vargselis b : Bad)
 	{
-    	out2 <<std::left<<std::setw(20) << b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) <<
-    	b.med << endl;
+    	out2 <<std::left<<std::setw(20) << b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	b.get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -622,13 +622,13 @@ void PrintListAvg2(T& S, B& Bad)
     out2 << endl;
 	for(Studentas g:S)
 	{
-    	out1 <<std::left<<std::setw(20) << g.name << std::setw(20) << g.lastname << std::setw(20) << std::setprecision(3) <<
-    	g.med << endl;
+    	out1 <<std::left<<std::setw(20) << g.get_name() << std::setw(20) << g.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	g.get_med() << endl;
 	}
 	for(Vargselis b : Bad)
 	{
-    	out2 <<std::left<<std::setw(20) << b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) <<
-    	b.med << endl;
+    	out2 <<std::left<<std::setw(20) << b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	b.get_med() << endl;
 	}
 	out1.close();
 	out2.close();
@@ -652,13 +652,13 @@ void PrintListMed2(G& S, B& Bad)
     out2 << endl;
 	for(Studentas g:S)
 	{
-    	out1 <<std::left<<std::setw(20) << g.name << std::setw(20) << g.lastname << std::setw(20) << std::setprecision(3) <<
-    	g.med << endl;
+    	out1 <<std::left<<std::setw(20) << g.get_name() << std::setw(20) << g.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	g.get_med() << endl;
 	}
 	for(Vargselis b : Bad)
 	{
-    	out2 <<std::left<<std::setw(20) << b.name << std::setw(20) << b.lastname << std::setw(20) << std::setprecision(3) <<
-    	b.med << endl;
+    	out2 <<std::left<<std::setw(20) << b.get_name() << std::setw(20) << b.get_lastname() << std::setw(20) << std::setprecision(3) <<
+    	b.get_med() << endl;
 	}
 	out1.close();
 	out2.close();
