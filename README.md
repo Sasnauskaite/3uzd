@@ -2,7 +2,7 @@
 
 # V1.1 skirta 2021.04.24
 
-[v1.1](https://github.com/Sasnauskaite/3uzduotis/releases/tag/V1.1) yra v1.1 papildymas. Programa nuo šios versijos naudoja nebe struktūras (struct), o klases (class).
+[v1.1](https://github.com/Sasnauskaite/3uzd/releases/tag/v1.1) yra v1.0 papildymas. Programa nuo šios versijos naudoja nebe struktūras (struct), o klases (class).
 
 *Programa yra 6 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`,  `func5.h`, `print.cpp` ir `makefile`.
 
