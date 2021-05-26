@@ -11,7 +11,7 @@ Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką
 
 ![oop 1 1](https://user-images.githubusercontent.com/78842487/119732484-ea3eaf00-be80-11eb-801e-7455e695a39c.png)
 
-# V1.0 skirta 2021.02.08
+# V1.2 skirta 2021.05.08
 
 [v1.2](https://github.com/Sasnauskaite/3uzd/releases/tag/V1.2) yra v1.1 papildymas. Programoje nuo šios versijos yra realizuota 'rule of three'.
 
