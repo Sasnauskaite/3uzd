@@ -22,7 +22,7 @@ using std::vector;
 using std::deque;
 using std::list;
 
-int studs = 100000, mrks = 5; //Tyrimo studentu skaicius ir pazymiu skaicius
+int studs = 1000000, mrks = 5; //Tyrimo studentu skaicius ir pazymiu skaicius
 double d = 5.00000;
 string FileName = "studentai10000.txt"; //Duomenu failo pavadinimas
 const char outFile[] = "rez.txt"; //Rezultatu failo pavadinimas

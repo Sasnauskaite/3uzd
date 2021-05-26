@@ -252,6 +252,7 @@ void tyrimas2()
 	        cout<<"-----------------------------------\nDEQUE KONTEINERIS\n";
         	auto start1 = std::chrono::steady_clock::now();
         	ReadFromFile(S);
+        	
         	start = std::chrono::steady_clock::now();
         	Separate(S);
         	cout << "Studentu deque isrusiavimas mano budu truko:" << std::setprecision(4)<<

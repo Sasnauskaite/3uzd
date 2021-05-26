@@ -67,6 +67,29 @@ class Studentas {
 		void set_skolaMed(int skolaMed_){
 			skolaMed = skolaMed_;
 		}
+
+		Studentas(const Studentas &a) { //kopijavimo konstruktorius
+			name = a.name;
+			lastname = a.lastname;
+			avg = a.avg;
+			med = a.med;
+			skolaAvg = a.skolaAvg;
+			skolaMed = a.skolaMed;
+		 }
+
+		Studentas&  operator=(const Studentas& a){ //priskyrimo operatorius
+			if (&a == this) return *this;
+			name = a.name;
+			lastname = a.lastname;
+			avg = a.avg;
+			med = a.med;
+			skolaAvg = a.skolaAvg;
+			skolaMed = a.skolaMed;
+			return *this;
+		}
+		~Studentas(){ //destruktorius
+
+		}
 };
 class Galvocius : public Studentas{
 	
