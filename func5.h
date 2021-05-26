@@ -30,6 +30,9 @@ struct Studentas
     int skolaAvg;
     int skolaMed;
 };
+
+int studs = 100000, mrks = 5; //Tyrimo studentu skaicius ir pazymiu skaicius
+
 struct Galvocius
 {
 	string name;
@@ -65,6 +68,12 @@ template <class T>
 void PrintBothAvg(T& S);
 template <class T>
 void PrintBothMed(T& S);
+
+template <class T>
+void PrintRez(T& S);
+template <class T>
+void Separate(T& S, int n);
+
 //--------------vector
 template <class T>
 void PrintVectorAvg(T& S);
@@ -132,6 +141,10 @@ void checkInput(char& choice);
 void checkInput(int &in);
 template <class T>
 void BubbleSort(T& S);
+template <class T>
+void ReadToList(T& S);
+template <class T>
+void SeparateList(T& S, int n);
 template <class T, class G, class B>
 void Separate1(T& S, G& Good, B& Bad, char choice);
 template <class T, class B>

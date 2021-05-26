@@ -24,6 +24,9 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 
 **Tyrimas:**
 
+
+![image](https://user-images.githubusercontent.com/78842487/116102017-fe8f6080-a6b6-11eb-9ac3-6993b124da04.png)
+
 ![image](https://user-images.githubusercontent.com/78842487/116103516-55496a00-a6b8-11eb-8673-af17fe2dff55.png)
 
 [v0.2](https://github.com/Sasnauskaite/2uzduotis/releases/tag/v0.4) yra v0.3 papildymas. Nuo šios versijos programa pati gali sukurti šabloninį studentų failą, tuomet jį perskaito, apskaičiavusi galutinį balą išskirsto studentus į ,,mokslinčius" ir ,,nuskriaustuosius" ir išveda informaciją į failus su atitinkamais pavadinimais, taip pat programa apskaičiuoja, kiek ms ji užtrunka atlikdama užduotis (kurdama failą, jį skaitydama, išskirstydama studentus pagal galutinį balą bei išvesdama į atitinkamus failus).
@@ -31,6 +34,7 @@ Jeigu keisite duomenų failo pavadinimą, jį keisti reikia `func.h` failo 27 ei
 **Tyrimas:**
 
 ![image](https://user-images.githubusercontent.com/78842487/116078575-76519100-a69f-11eb-877d-d75fec6db840.png)
+
 
 Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabdžiau ją), todėl rūšiavimo ir išvedimo apskaičiuoti nepavyko.
 
@@ -44,6 +48,13 @@ Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabd�
 *Programa yra 3 failuose `main5.cpp`, `func5.cpp` ir `func5.h`*
 
 **Mano palyginimas:**
+
+
+![image](https://user-images.githubusercontent.com/78842487/116101872-e1f32880-a6b6-11eb-921b-0bf263dc59dd.png)
+
+**Sistema:**
+
+![image](https://user-images.githubusercontent.com/78842487/116100764-ebc85c00-a6b5-11eb-8348-94ad377a0d5c.png)
 
 ![image](https://user-images.githubusercontent.com/78842487/116103587-66927680-a6b8-11eb-937d-3d2765b5e2c4.png)
 
@@ -60,6 +71,7 @@ Programa su 1000000 failų dirbo labai ilgai (daugiau nei 15min iki kol sustabd�
 **Tyrimas**
 
 ![image](https://user-images.githubusercontent.com/78842487/118854802-c1954300-b8dd-11eb-85c4-c7cab8f05dea.png)
+
 
 
 # Paleidimo instrukcija
