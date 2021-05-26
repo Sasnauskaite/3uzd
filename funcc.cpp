@@ -23,7 +23,11 @@ void questions()
 	{
 		cout << "Kiek failu norite sugeneruoti? (nuo 1 iki 5): ";
 		cin >> kint;
+
+		for (int i = 0; i < kint; i++)
+
 		while(kint!=0)
+
 		{
 	        cout << "Iveskite kiek bus studentu: ";
 	        cin >> n;
@@ -64,7 +68,9 @@ void questions()
 			    cout << "Studentu atspausdinimas truko:" << std::setprecision(4)<<
 			    std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start).count() << " ms" << endl;
 			}
+
 			kint-=1;
+
 		}
 	}
 }
@@ -93,7 +99,11 @@ void Separate(int n)
 void PrintRez()
 {
 	std::ofstream fr(outFile);
+
+	fr <<std::setw(20) << v << std::setw(20) << p << std::setw(15) << vidd << std::setw(15) <<
+
 	fr <<std::left <<std::setw(20) << v << std::setw(20) << p << std::setw(15) << vidd << std::setw(15) <<
+
 	medd << endl;
 	for(int i=0; i<70; i++)
 	{
@@ -102,7 +112,11 @@ void PrintRez()
 	fr << endl;
 	for (int i = 0; i < n; i++)
 	{
+
+		fr <<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << S[i].avg << 
+
 		fr <<std::left <<std::setw(20) << S[i].name << std::setw(20) << S[i].lastname << std::setw(20) << std::setprecision(3) << S[i].avg << 
+
 		std::setw(20) << std::setprecision(3) << S[i].med << endl;
 	}
 	fr.close();
@@ -123,7 +137,11 @@ void PrintBothAvg()
 	    out2 << line;
 	}
 	out2 << endl;
+
+	for (int i = 0; i < n; i++)
+
 	for (int i = 1; i < n+1; i++)
+
 	{
 		if (S[i].skolaAvg == 0)
 		{
@@ -155,7 +173,11 @@ void PrintBothMed()
 	    out2 << line;
 	}
 	out2 << endl;
+
+	for (int i = 0; i < n; i++)
+
 	for (int i = 1; i < n+1; i++)
+
 	{
 		if (S[i].skolaMed == 0)
 		{
