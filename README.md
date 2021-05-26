@@ -11,6 +11,12 @@ Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką
 
 ![oop 1 1](https://user-images.githubusercontent.com/78842487/119732484-ea3eaf00-be80-11eb-801e-7455e695a39c.png)
 
+# V1.0 skirta 2021.02.08
+
+[v1.2](https://github.com/Sasnauskaite/3uzd/releases/tag/V1.2) yra v1.1 papildymas. Programoje nuo šios versijos yra realizuota 'rule of three'.
+
+*Programa yra 6 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`,  `func5.h`, `print.cpp` ir `makefile`.
+
 # 2UŽDUOTIS
 
 # V0.1 skirta 2021.02.20
@@ -108,5 +114,7 @@ Po to tereikia paleisti su komanda: `./test`
 V1.0-> `mingw32-make` [Taip makefile veikia per windows] (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. func5.cpp, func5.h, print.cpp ir makefile).
 
 V1.1-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. Studentas.cpp, Studentas.h, func5.h, print.cpp ir makefile).
+
+V1.2-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. Studentas.cpp, Studentas.h, func5.h, print.cpp ir makefile).
 
 Tada programa pradeda veikti ir jums belieka atsakyti į jos užduodamus klausimus (atsakyti reikia t="taip" arba n="ne).
