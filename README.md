@@ -123,4 +123,6 @@ V1.1-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pa
 
 V1.2-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. Studentas.cpp, Studentas.h, func5.h, print.cpp ir makefile).
 
+V1.5-> `mingw32-make` (norint, kad veiktų ši versija be main5.cpp jums taip pat reikia turėti ir kitus šiai programai reikalingus failus (t.y. Studentas.cpp, Zmogus.h, Studentas.h, func5.h, print.cpp ir makefile).
+
 Tada programa pradeda veikti ir jums belieka atsakyti į jos užduodamus klausimus (atsakyti reikia t="taip" arba n="ne).
