@@ -23,6 +23,14 @@ Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką
 
 *Programa yra 7 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`, `Zmogus.h`,  `func5.h`, `print.cpp` ir `makefile`.
 
+# V2.0 skirta 2021.05.22
+
+[v2.0](https://github.com/Sasnauskaite/3uzd/releases/tag/V2.0) yra v1.5 papildymas. Programą nuo šios versijos galima instaliuoti su `setup.exe` failu. Programai yra paruošta doxygen [dokumentacija](file:///C:/Users/Evelina/OneDrive/Stalinis%20kompiuteris/Studijos%202semestras/Objektinis%20programavimas/versijos%20nuo%201.1/klase%201.5/Doxygen%20documentation/html/hierarchy.html) bei atliktiti unit testai.
+
+**Testai**
+
+
+
 # 2UŽDUOTIS
 
 # V0.1 skirta 2021.02.20
