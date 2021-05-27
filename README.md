@@ -17,6 +17,12 @@ Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką
 
 *Programa yra 6 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`,  `func5.h`, `print.cpp` ir `makefile`.
 
+# V1.5 skirta 2021.05.15
+
+[v1.5](https://github.com/Sasnauskaite/3uzd/releases/tag/V1.5) yra v1.2 papildymas. Programoje nuo šios versijos yra realizuota bazinė klasė, skirta zmogaus aprašymui ir išvestinė (derived) klasė. Žmogui skirta bazinė klasė yra abstrakčioji klasė, t.y. negalima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasių.
+
+*Programa yra 7 failuose `main5.cpp`, `Studentas.cpp`, `Studentas.h`, `Zmogus.h`,  `func5.h`, `print.cpp` ir `makefile`.
+
 # 2UŽDUOTIS
 
 # V0.1 skirta 2021.02.20
