@@ -25,11 +25,7 @@ Programa class skaičiavimus ir struct skaičiavimus atlieka per panašų laiką
 
 # V2.0 skirta 2021.05.22
 
-[v2.0](https://github.com/Sasnauskaite/3uzd/releases/tag/V2.0) yra v1.5 papildymas. Programą nuo šios versijos galima instaliuoti su `setup.exe` failu. Programai yra paruošta doxygen dokumentacija bei atliktiti unit testai.
-
-**Testai**
-
-
+[v2.0](https://github.com/Sasnauskaite/3uzd/releases/tag/V2.0) yra v1.5 papildymas. Programą nuo šios versijos galima instaliuoti su `setup.exe` failu. Programai yra paruošta doxygen dokumentacija.
 
 # 2UŽDUOTIS
 
