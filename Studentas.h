@@ -1,10 +1,9 @@
 #include <string>
+#include "Zmogus.h"
 using std::string;
 
-class Studentas {
+class Studentas : public Zmogus {
 	protected:
-		string name;
-		string lastname;
 		double avg;
 		double med;
 		int skolaAvg;
@@ -20,13 +19,6 @@ class Studentas {
 			skolaMed = skolaMed_;
 		};
 
-		inline const string get_name(){
-			return name;
-		}
-
-		inline const string get_lastname(){
-			return lastname;
-		}
 
 		inline const double get_avg(){
 			return avg;
@@ -68,6 +60,8 @@ class Studentas {
 			skolaMed = skolaMed_;
 		}
 
+        string inicialai() { return (!name.empty() && !lastname.empty())?name[0]+"."+lastname[0]:"Undefined";}
+
 		Studentas(const Studentas &a) { //kopijavimo konstruktorius
 			name = a.name;
 			lastname = a.lastname;
@@ -91,9 +85,9 @@ class Studentas {
 
 		}
 };
-class Galvocius : public Studentas{
+class Galvocius :  public Studentas{
 	
 };
-class Vargselis : public Studentas{
+class Vargselis :  public Studentas{
 	
 };
